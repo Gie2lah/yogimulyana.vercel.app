@@ -32,7 +32,15 @@ export default async function DashboardBlogPage() {
     <>
       <div className="px-[10%] min-h-screen">
         <div className="mb-2">
-          <AddBlog categories={categories} />
+          <AddBlog
+            categories={categories}
+            blog={{
+              id: 0,
+              title: "",
+              content: "",
+              categoryId: 0,
+            }}
+          />
         </div>
         <table className="table w-full">
           <thead>
