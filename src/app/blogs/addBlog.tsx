@@ -5,6 +5,7 @@ import "froala-editor/css/froala_editor.pkgd.min.css";
 import axios from "axios";
 import FroalaEditor from "react-froala-wysiwyg";
 import { Editor } from "@tinymce/tinymce-react";
+import { useRouter } from "next/navigation";
 
 interface Category {
   id: number;
@@ -33,19 +34,25 @@ export default function AddBlog({
   const [title, setTitle] = useState("");
   const [category, setCategory] = useState("");
   const [content, setContent] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const router = useRouter();
 
   const handleSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
+    setIsLoading(true);
     try {
       await axios.post("/api/blogs", {
         title,
         content,
         categoryId: Number(category),
       });
+      setIsLoading(false);
       setTitle("");
       setContent("");
       setCategory("");
       setIsOpen(false);
+      router.refresh();
     } catch (error) {
       // Handle error
       console.error("Error adding blog:", error);

@@ -34,21 +34,6 @@ export async function DELETE(
   return NextResponse.json(blog, { status: 200 });
 }
 
-// export const GET = async (
-//   req: NextRequest,
-//   context: { params: { id: string } }
-// ) => {
-//   const id = Number(context.params.id) || 0;
-
-//   const blog = await prisma.blog.findFirst({
-//     where: {
-//       id: id,
-//     },
-//   });
-
-//   return NextResponse.json({ blog });
-// };
-
 export async function GET(
   request: Request,
   { params }: { params: { id: string } }

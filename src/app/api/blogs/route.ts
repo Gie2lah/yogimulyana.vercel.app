@@ -16,7 +16,9 @@ export async function POST(request: Request) {
       title: body.title,
       content: body.content,
       categoryId: body.categoryId,
+      userId: 1,
     },
   });
+
   return NextResponse.json(blog, { status: 201 });
 }

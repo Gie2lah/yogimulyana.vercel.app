@@ -15,15 +15,24 @@ model Blog {
   content    String
   categoryId Int
   category   Category @relation(fields: [categoryId], references: [id])
+  userId     Int
+  user       User     @relation(fields: [userId], references: [id])
 }
 
 model Category {
-  id    Int    @id @default(autoincrement())
-  title String
-  blogs Blog[]
+  id         Int      @id @default(autoincrement())
+  title      String
+  blogs      Blog[]
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  name       String
+  email      String   @unique
+  blogs      Blog[]
 }
 
 model Project {
-  id    Int    @id @default(autoincrement())
-  title String
+  id         Int      @id @default(autoincrement())
+  title      String
 }

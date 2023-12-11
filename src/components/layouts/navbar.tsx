@@ -21,7 +21,7 @@ export default function Navbar() {
                 Home
               </li>
             </Link>
-            <Link href="/blog">
+            <Link href="/blogs">
               <li
                 className={`mr-3 ${
                   pathname === "/blogs" ? "text-blue-300" : "text-white"
