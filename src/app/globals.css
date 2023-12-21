@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
 
 :root {
   /* Customize these variable */
@@ -127,4 +128,34 @@
   background-color: #beb6b9;
   border-radius: 4px;
   padding: 2px 4px;
+}
+
+.font {
+  font-family: "JetBrains Mono", monospace;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.social::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  margin-top: 24px;
+  background-color: white;
+}
+
+.email::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 90px;
+  margin: 0px auto;
+  margin-top: 24px;
+  background-color: white;
+}
+
+.text-email {
+  writing-mode: vertical-lr;
+  font-size: 16px;
 }

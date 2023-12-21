@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { PrismaClient } from "@prisma/client";
 import type { Blog } from "@prisma/client";
 import { NextApiRequest, NextApiResponse } from "next";
+
 const prisma = new PrismaClient();
 
 export async function PATCH(

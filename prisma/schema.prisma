@@ -10,6 +10,8 @@ datasource db {
 model Blog {
   id         Int      @id @default(autoincrement())
   title      String
+  imageUrl   String?
+  desc       String
   createdAt  DateTime @default(now())
   updatedAt  DateTime @default(now())
   content    String

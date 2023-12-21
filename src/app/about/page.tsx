@@ -33,38 +33,36 @@ export default function About() {
             />
             <article className="prose">
               <p>
-                Halo! Saya Yogi. Saya mulai belajar pengembangan web pada saat
-                saya sedang kuliah di semester 2. Saya belajar pengembangan web
-                awalnya dari situs website yaitu freeCodeCamp dan menonton video
-                youtube untuk mempelajari tentang bagaimana cara membuat sebuah
-                website yang baik dan menarik.
+                Hello, I&#39;m Yogi. I started learning web development during
+                my second semester in college. I initially began learning from
+                websites like freeCodeCamp and watching YouTube videos to
+                understand how to create a good and engaging website.
               </p>
               <p>
-                Ada banyak teknologi yang saya harus pelajari dalam pengembangan
-                frontend dan itu yang membuat saya semakin bersemangat dalam
-                mempelajarinya. Saya menyiapkan seperti goals – goals yang harus
-                saya penuhi agar saya bisa berkembang secara signifikan.
+                There&#39;s a lot of technology to grasp in frontend
+                development, and that&#39;s what excites me about learning it.
+                I&#39;ve set specific goals that I aim to achieve to make
+                significant progress.
               </p>
               <p>
-                Di website ini saya akan menulis beberapa blog dan memamerkan
-                project yang telah saya buat, namun saya tidak akan memamerkan
-                project yang bersifat sederhana tetapi saya memamerkan project
-                yang sifatnya sudah publik. Dan tujuan saya membuat blog pada
-                website ini dengan maksud agar pengunjung atau pembaca blog di
-                website saya ini agar mereka bisa mengerti apa yang saya
-                kerjakan dan saya alami dalam proses pengembangan website.
+                On this website, I&#39;ll be writing some blogs and showcasing
+                projects I&#39;ve worked on. However, I won&#39;t showcase
+                simple projects; rather, I&#39;ll display projects that are
+                already public. My goal in creating blogs on this website is to
+                help visitors and blog readers understand what I&#39;ve worked
+                on and experienced throughout the website development process.
               </p>
             </article>
-            <h3 className="h4 mt-4">What I`m up to?</h3>
+            <h3 className="h4 mt-4">What I&#39;m up to?</h3>
             <article className="mt-2 prose">
               <ul>
                 <li>
-                  Saya seorang full-stack engineer di organisasi GenPI (Generasi
-                  Pesona Indonesia) Kota Dumai
+                  I am a full-stack engineer at GenPI (Generasi Pesona
+                  Indonesia) in Dumai City.
                 </li>
                 <li>
-                  Saya seorang penulis blog di website GenPI Kota Dumai dan
-                  website saya sendiri
+                  I am a blog writer on the GenPI Dumai City website as well as
+                  on my personal website.
                 </li>
               </ul>
             </article>
@@ -80,8 +78,8 @@ export default function About() {
           <h2>Contact</h2>
           <article className="prose mt-4">
             <p>
-              Jika kalian ada kendala dalam pengembangan web. Saya akan dengan
-              senang hati membantu!.
+              If you encounter any challenges in web development, I&#39;d be
+              more than happy to help!.
             </p>
           </article>
           {/* <figure className="mt-2">

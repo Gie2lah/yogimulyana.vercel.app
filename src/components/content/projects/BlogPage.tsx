@@ -1,11 +1,9 @@
+/* eslint-disable @next/next/no-async-client-component */
 /* eslint-disable @next/next/no-img-element */
 import { PrismaClient } from "@prisma/client";
 import DeleteBlog from "@/app/blogs/deleteBlog";
 import UpdateBlog from "@/app/blogs/updateBlog";
 import AddBlog from "@/app/blogs/addBlog";
-import Link from "next/link";
-import CategoriesComponent from "@/components/content/categories/CategoriesComponent";
-// import CategoriesComponent from "@/components/content/categories/CategoriesComponent";
 
 const prisma = new PrismaClient();
 
@@ -31,30 +29,15 @@ const getBlogs = async () => {
   return res;
 };
 
-export default async function DashboardBlogPage() {
+export default async function ProjectComponent() {
   const [blogs, categories] = await Promise.all([getBlogs(), getCategories()]);
   return (
     <>
-      <div className="px-[10%] py-[120px] min-h-screen">
-        <div className="space-y-4">
-          <h1>Blogs</h1>
-          <p>
-            Not only does it contain tutorials, but it also provides highly
-            valuable knowledge.
-          </p>
+      <div className="min-h-screen px-[14%] py-[120px]">
+        <div className="">
+          <h2 className="posts">Featured Projects</h2>
         </div>
-        <div className="form-control w-full mt-4 mb-1">
-          <input
-            type="text"
-            className="input input-bordered"
-            placeholder="Search..."
-          />
-        </div>
-        <div className="mb-6 space-x-4 flex items-center">
-          <h5 className="font-bold">Choose topic:</h5>
-          <CategoriesComponent />
-        </div>
-        <div className="flex items-center justify-center flex-wrap gap-4">
+        <div className="mt-6 flex gap-4 flex-wrap mx-auto">
           {blogs.map((blog, index) => (
             <>
               <div
@@ -68,9 +51,7 @@ export default async function DashboardBlogPage() {
                   />
                 </figure>
                 <div className="card-body">
-                  <Link href={`/blogs/${blog.id}`}>
-                    <h2 className="card-title">{blog.title}</h2>
-                  </Link>
+                  <h2 className="card-title">{blog.title}</h2>
                   <p className="truncate">{stripHtmlTags(blog.content)}</p>
                 </div>
               </div>
