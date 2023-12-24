@@ -37,6 +37,7 @@ export default async function DashboardBlogPage() {
             blog={{
               id: 0,
               title: "",
+              desc: "",
               content: "",
               categoryId: 0,
             }}
